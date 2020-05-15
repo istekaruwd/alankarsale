@@ -105,10 +105,155 @@ a:hover {
 	font-weight: 300;
 }
 
+/* Banner Area */
+
+.bnr-area {
+    margin-top: 30px;
+}
+.bnr-area img {
+    width: 100%;
+}
+
+/* Promo Area */
+
+.promo-area {
+    background-color: #f9f9f9;
+    padding-bottom: 20px;
+}
+.single-promo {
+    margin-top: 20px;
+}
+.single-promo .promo-text {
+    margin-top: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Banner Area */
+
+#slider{
+    width:100%;
+    height:450px;
+    position:relative;
+    overflow:hidden;
+    margin:30px 0 0;
+}
+.slider-wrapper{
+    width:100%;
+    float:left;
+    height:100%;
+    overflow:hidden;
+    position:relative;
+}
+@keyframes load{
+    from{left:-100%;}
+    to{left:0;}
+}
+.slides{
+  width:500%;
+  height:100%;
+  position:relative;
+  animation:slide 21s infinite;
+}
+.slider{
+  width:20%;
+  height:100%;
+  float:left;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+.slide img{
+  width:100%;
+  height:auto;
+}
+.slide img{
+  width:100%;
+  height:auto;
+}
+.image{
+  width:100%;
+  height:100%;
+}
+.image img{
+  width:100%;
+  height:auto;
+}
+
+/* Animation */
+
+@keyframes slide{
+   0%{
+    margin-left:0%;
+  }
+  28%{
+    margin-left:0%;
+  }
+  33%{
+    margin-left:-100%;
+  }
+  62%{
+    margin-left:-100%;
+  }
+  66.33%{
+    margin-left:-200%;
+  }
+  85%{
+    margin-left:-200%;
+  }
+  97%{
+    margin-left:-200%;
+  }
+  100%{
+    margin-left:-300%;
+  }
+}
+.image{
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+#slider .container{
+    height:100%;
+}
+
+.slider-text {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    background-color: rgba(0, 0, 0, .55);
+    transform: translateY(-40%);
+    padding: 30px;
+}
+
+.slider-text h3 {
+    color: #fff;
+    text-transform: uppercase;
+}
+.slider-text ul {
+    margin: 0;
+    padding: 0;
+}
+.slider-text ul li {
+    list-style-type: none;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 30px;
+}
+.slider-text ul li:before {
+    font-family: FontAwesome;
+    content: '\f0a4';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #FD8703;
+}
+
 /* Product Area */
 
 .product-area {
-	padding: 25px 0;
+	padding: 30px 0;
 }
 
 /* Sidebar Widget Area */
@@ -143,14 +288,14 @@ a:hover {
 
 /* Gallery Area */
 
-.slider {
+.gallery {
     position: relative;
     text-align: center;
     overflow: hidden;
     min-height: 488px;
     margin-bottom: 35px;
 }
-.slider .large {
+.gallery .large {
     position: absolute;
     left: 100px;
     top: 0;
@@ -161,20 +306,20 @@ a:hover {
     height: 486px;
     background-color: #fff;
 }
-.slider .large .large-inr {
+.gallery .large .large-inr {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 }
-.slider .large .large-inr img {
+.gallery .large .large-inr img {
 	padding: 25px;
 	height: auto;
 	width: 100%;
 }
-.slider input[name='slide_switch'] {
+.gallery input[name='slide_switch'] {
     display: none;
 }
-.slider label {
+.gallery label {
     margin: 0 0 10px;
     display: block;
     cursor: pointer;
@@ -187,21 +332,21 @@ a:hover {
     border: 1px solid #e8e8e8;
     padding: 0 10px;
 }
-.slider label img {
+.gallery label img {
     display: block;
     width: 100%;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
-.slider input[name='slide_switch']:checked+label {
+.gallery input[name='slide_switch']:checked+label {
     opacity: 1;
 }
-.slider input[name='slide_switch']~.large {
+.gallery input[name='slide_switch']~.large {
     opacity: 0;
     z-index: 1;
 }
-.slider input[name='slide_switch']:checked+label+.large {
+.gallery input[name='slide_switch']:checked+label+.large {
     opacity: 1;
     z-index: 2;
 }
@@ -395,6 +540,9 @@ a:hover {
     .single-more-item a {
         font-size: 14px;
     }
+    .image {
+        background-position: right center;
+    }
 
 }
 
@@ -412,6 +560,9 @@ a:hover {
     }
     .ftr-logo h1 {
         font-size: 30px;
+    }
+    .image {
+        background-position: right center;
     }
 
 }
@@ -473,6 +624,17 @@ a:hover {
     }
     .main-tab label {
     	display: block;
+    }
+    .gallery .large {
+        display: none;
+    }
+    .gallery label {
+        width: 100%;
+        height: auto !important;
+        opacity: 1;
+    }
+    .gallery label img {
+        transform: translateY(0);
     }
  
 }
